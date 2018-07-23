@@ -24,3 +24,6 @@ plot(sub_pow$Time, as.numeric(as.character(sub_pow$Global_active_power)), type =
 # Additional grapgh annotation
 title(main = "Global Active Power Vs Time")
 
+#exporting
+dev.copy(png, file="plot2.png", height=480, width=480)
+dev.off()

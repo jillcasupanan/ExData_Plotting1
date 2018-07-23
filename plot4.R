@@ -36,3 +36,7 @@ with(sub_pow,
   
   plot(sub_pow$Time,as.numeric(as.character(sub_pow$Global_reactive_power)),type="l",xlab="datetime",ylab="Global_reactive_power")
 })
+
+#exporting
+dev.copy(png, file="plot4.png", height=480, width=480)
+dev.off()

@@ -13,5 +13,8 @@ names(pow) <- c("Date", "Time",
 sub_pow <- subset(pow, pow$Date=="1/2/2007" | pow$Date == "2/2/2007")
 
 # Calling the basic plot function (histogram of global active power for 2 days)
-#png("plot1.png", width = 480, height = 480)
 hist(as.numeric(as.character(sub_pow$Global_active_power)), col = "red", main = "Global Active Power", xlab = "Global Active Power (killowatts)")
+
+#exporting
+dev.copy(png, file="plot1.png", height=480, width=480)
+dev.off()
